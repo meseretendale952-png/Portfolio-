@@ -1,59 +1,257 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meseret - Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meseret - CS Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f0f2f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 15px;
+            font-size: 28px;
+        }
+
+        .title {
+            color: #667eea;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* Section Cards */
         .card {
             background: white;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 15px;
+            padding: 25px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
         }
-        h1 { color: #1a1a2e; }
-        h2 { color: #16213e; }
+
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Skills */
         .skill {
-            background: #0f3460;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 8px 18px;
+            border-radius: 25px;
             display: inline-block;
-            margin: 5px;
+            margin: 6px;
             font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .project-item {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .project-item strong {
+            color: #333;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            min-width: 40px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        /* Education */
+        .edu-item {
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .edu-degree {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .edu-school {
+            color: #667eea;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="profile.jpg" alt="Meseret" style="width:120px; border-radius:50%;">
-        
-        <h1>Meseret Endale</h1>
-        <p>Computer Science Student - 3rd Year</p>
-    </div>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-card">
+            <img src="profile.jpg" alt="Meseret" class="profile-img">
+            <h1>Meseret Endale</h1>
+            <div class="title">Computer Science Student | 3rd Year</div>
+        </div>
 
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I am a 3rd year Computer Science student passionate about programming and problem solving.</p>
-    </div>
+        <!-- About Me -->
+        <div class="card">
+            <h2>About Me</h2>
+            <p>I am a 3rd year Computer Science student passionate about programming and problem solving. I love learning new technologies and building useful projects that make a difference.</p>
+        </div>
 
-    <div class="card">
-        <h2>Skills</h2>
-        <span class="skill">Python</span>
-        <span class="skill">Problem Solving</span>
-        <span class="skill">HTML/CSS</span>
-    </div>
+        <!-- Education -->
+        <div class="card">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="edu-degree">🎓 Bachelor of Science in Computer Science</div>
+                <div class="edu-school">📍 Injibara College</div>
+                <div>📅 3rd Year Student</div>
+            </div>
+        </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>GitHub: meseretendale952-png</p>
+        <!-- Skills -->
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <div>
+                <span class="skill">Python</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">HTML5/CSS3</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">VS Code</span>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="card">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <strong>📱 Simple Calculator</strong>
+                <div>A Python program that performs basic arithmetic operations</div>
+            </div>
+            <div class="project-item">
+                <strong>🌐 Portfolio Website</strong>
+                <div>Personal portfolio website built with HTML & CSS</div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="card">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:meseretendale952@gmail.com">meseretendale952@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <a href="https://t.me/mesi_2e">@mesi_2e</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🐙</span>
+                    <a href="https://github.com/meseretendale952-png">github.com/meseretendale952-png</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Meseret Endale | Computer Science Student</p>
+        </div>
     </div>
 </body>
 </html>
