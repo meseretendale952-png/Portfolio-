@@ -1,112 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meseret - CS Portfolio</title>
+    <title>Meseret Endale | CS Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .profile-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #667eea;
-        }
-        h1 {
-            color: #333;
-            margin-top: 15px;
-        }
-        .title {
-            color: #667eea;
-            font-size: 18px;
-        }
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        h2 {
-            color: #333;
-            border-left: 4px solid #667eea;
-            padding-left: 12px;
-            margin-bottom: 15px;
-        }
-        .skill {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 25px;
-            display: inline-block;
-            margin: 6px;
-        }
-        .project-item {
-            background: #f8f9fa;
-            padding: 12px 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border-left: 3px solid #667eea;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        .contact-item a {
-            color: #333;
-            text-decoration: none;
-        }
-        .contact-item a:hover {
-            color: #667eea;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: white;
-        }
-        @media (max-width: 600px) {
-            .profile-img { width: 120px; height: 120px; }
-            h1 { font-size: 24px; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="profile-card">
-            <img src="profile.jpg" alt="Meseret" class="profile-img">
+            <img src="profile.jpg" alt="Meseret" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
             <h1>Meseret Endale</h1>
-            <div class="title">Computer Science Student | 3rd Year</div>
+            <div class="marquee">
+                <span>🚀 COMPUTER SCIENCE STUDENT | 3RD YEAR | PASSIONATE CODER | PROBLEM SOLVER 🚀</span>
+            </div>
         </div>
 
         <div class="card">
             <h2>About Me</h2>
-            <p>I am a 3rd year Computer Science student passionate about programming and problem solving.</p>
+            <p>I am a 3rd year Computer Science student passionate about programming and problem solving. I love building web applications and learning new technologies.</p>
         </div>
 
         <div class="card">
@@ -116,25 +28,69 @@
         </div>
 
         <div class="card">
-            <h2>Technical Skills</h2>
-            <span class="skill">Python</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">HTML/CSS</span>
-            <span class="skill">Git/GitHub</span>
+            <h2>📚 Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <span class="skill-icon">🐍</span>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">★★★★★ <span>Expert</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                </div>
+                
+                <div class="skill-card">
+                    <span class="skill-icon">⚡</span>
+                    <div class="skill-name">C++</div>
+                    <div class="skill-level">★★★★☆ <span>Advanced</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                </div>
+                
+                <div class="skill-card">
+                    <span class="skill-icon">☕</span>
+                    <div class="skill-name">Java</div>
+                    <div class="skill-level">★★★★☆ <span>Advanced</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                </div>
+                
+                <div class="skill-card">
+                    <span class="skill-icon">🌐</span>
+                    <div class="skill-name">HTML/CSS</div>
+                    <div class="skill-level">★★★★★ <span>Expert</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+                </div>
+                
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <div class="skill-name">Graphics</div>
+                    <div class="skill-level">★★★☆☆ <span>Intermediate</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+                </div>
+                
+                <div class="skill-card">
+                    <span class="skill-icon">🧠</span>
+                    <div class="skill-name">AI / ML</div>
+                    <div class="skill-level">★★★☆☆ <span>Learning</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+                </div>
+            </div>
+            <div style="margin-top: 15px; text-align: center; color: #aaa; font-size: 13px;">
+                🚀 Currently learning: Advanced AI & Cloud Computing
+            </div>
         </div>
 
         <div class="card">
             <h2>Projects</h2>
             <div class="project-item">
-    <strong>🧮 Simple Calculator</strong>
-    <div>Interactive web calculator - <a href="calculator.html">Try it Live</a></div>
-</div><div class="project-item">
-    <strong>🏥 Simple Symptom Checker</strong>
-    <div>Medical advice system - <a href="symptom-checker.html">Try it Live</a></div>
-</div><div class="project-item">
-    <strong>📢 Job Board - Location Filter</strong>
-    <div>Post and find jobs by location - <a href="jobs-location.html">Try it Live</a></div>
-</div>
+                <strong>🧮 Simple Calculator</strong>
+                <div>Interactive web calculator - <a href="calculator.html">Try it Live</a></div>
+            </div>
+            <div class="project-item">
+                <strong>🏥 Simple Symptom Checker</strong>
+                <div>Medical advice system - <a href="symptom-checker.html">Try it Live</a></div>
+            </div>
+            <div class="project-item">
+                <strong>📢 Job Board - Location Filter</strong>
+                <div>Post and find jobs by location - <a href="jobs-location.html">Try it Live</a></div>
+            </div>
             <div class="project-item">
                 <strong>🌐 Portfolio Website</strong>
                 <div>Personal portfolio with HTML & CSS</div>
@@ -158,7 +114,7 @@
         </div>
 
         <div class="footer">
-            <p>© 2024 Meseret Endale | Computer Science Student</p>
+            <p>© 2025 Meseret Endale | Computer Science Student</p>
         </div>
     </div>
 </body>
